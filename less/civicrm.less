@@ -1,0 +1,64 @@
+@import "../bootstrap/less/bootstrap.less";
+
+//Overriden variables
+@font-family-sans-serif:  "Source Sans Pro", Helvetica, Arial, sans-serif;
+
+//Extra variables
+@CiviWhite: #fff;
+@CiviBlue: #056186;
+@CiviGreen: #7dbd56;
+@CiviLightGrey: #eee;
+@CiviGrey: #6c696a;
+@CiviDarkGrey: #393536;
+
+//Headings
+
+h1, h2, h3, .navbar-nav li {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+//Navigation bar
+.navbar {
+    background-color: @CiviDarkGrey;
+    li a {
+        color: @CiviWhite;
+    }
+    li a:hover {
+        background-color: lighten(@CiviDarkGrey, 5%);
+    }
+}
+//Primary menu should be a bit larger
+.navbar-secondary li{
+    font-size: 80%;
+}
+
+//Section stripes
+.CiviWhite-stripe {
+    background-color: @CiviWhite;
+    color: @CiviGrey;
+}
+.CiviBlue-stripe {
+    background-color: @CiviBlue;
+    color: @CiviWhite;
+    a {
+        color: @CiviWhite;
+    }
+}
+.CiviGreen-stripe {
+    background-color: @CiviGreen;
+    color: @CiviWhite;
+}
+.CiviGrey-stripe {
+    background-color: @CiviGrey;
+    color: @CiviWhite;
+}
+.CiviDarkGrey-stripe {
+    background-color: @CiviDarkGrey;
+    color: @CiviGrey;
+    a {
+        color: @CiviWhite;
+    }
+}
+
+//civicrm.org specific stylings
