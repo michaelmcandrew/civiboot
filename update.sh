@@ -1,16 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
 
 #Delete current theme.
 rm -rf dist
 
 #Clone the latest version of bootstrap.
-#git clone https://github.com/twbs/bootstrap
+git -C bootstrap pull
 
 #Copy the distribution the root folder.
 cp -r bootstrap/dist .
 
-#Create new bootstrap based css with updated variables from the less directory
-lessc -x less/civicrm.less dist/css/bootstrap.min.css
-
-#Delete the cloned bootstrap repo now that we are done with it.
-#rm -rf bootstrap
+#Create new bootstrap based css file (bootstrap-civicrm.min.css) with updated variables from less/civicrm.less
+lessc -x less/civicrm.less dist/css/bootstrap-civicrm.min.css
